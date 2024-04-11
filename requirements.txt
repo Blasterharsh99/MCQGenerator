@@ -1,9 +1,9 @@
-openai
 langchain
 streamlit
 python-dotenv
 PyPDF2
 ctransformers
 transformers
+google-generativeai
 
 -e .
