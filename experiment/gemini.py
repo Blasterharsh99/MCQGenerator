@@ -1,8 +1,7 @@
-Gemini_API = 'AIzaSyBH1sCJQnppP-PxGbfoKeCyVm2huottElA'
-import google.generativeai as genai
-import os
+from langchain_google_genai import ChatGoogleGenerativeAI
+from dotenv import load_dotenv
+import os 
+load_dotenv()
+key = os.getenv('GOOGLE_API_KEY')
 
-genai.configure(api_key=Gemini_API)
-model = genai.GenerativeModel('gemini-pro')
-response = model.generate_content('What are you?')
-print(response.text)
+llm = ChatGoogleGenerativeAI(model="gemini-pro")
